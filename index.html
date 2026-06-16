@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Всеволод Быков — Актёр</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0907;
+    --deep: #0e0c09;
+    --charcoal: #1c1a15;
+    --gold: #c8a84b;
+    --gold-light: #e2c97e;
+    --cream: #f0e8d5;
+    --muted: #8a7f6a;
+    --text: #d4c9b0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.55;
+  }
+
+  /* ══ BUTTONS ══ */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: all 0.35s;
+    position: relative;
+  }
+  .btn-gold {
+    color: #0a0907;
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, #a8882e 100%);
+    padding: 1rem 2.5rem;
+    clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+    font-weight: 600;
+  }
+  .btn-gold::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, transparent 60%);
+    clip-path: inherit;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .btn-gold:hover::after { opacity: 1; }
+  .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 10px 35px rgba(200,168,75,0.4); }
+
+  .btn-outline {
+    color: var(--gold);
+    padding: 0.9rem 2.2rem;
+    border: 1px solid rgba(200,168,75,0.45);
+    overflow: hidden;
+  }
+  .btn-outline::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(200,168,75,0.07);
+    transform: translateX(-105%);
+    transition: transform 0.35s;
+  }
+  .btn-outline:hover::before { transform: translateX(0); }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold-light); }
+
+  .btn-ghost {
+    color: var(--muted);
+    padding: 0.5rem 0;
+    letter-spacing: 0.25em;
+    font-size: 0.62rem;
+    border-bottom: 1px solid transparent;
+    gap: 0.5rem;
+  }
+  .btn-ghost::after {
+    content: '→';
+    font-family: serif;
+    font-size: 1rem;
+    transition: transform 0.3s;
+    display: inline-block;
+    letter-spacing: 0;
+  }
+  .btn-ghost:hover { color: var(--gold); border-bottom-color: rgba(200,168,75,0.4); }
+  .btn-ghost:hover::after { transform: translateX(5px); }
+
+  /* ══ NAV ══ */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4rem;
+    background: linear-gradient(to bottom, rgba(10,9,7,0.97), transparent);
+    transition: background 0.4s, padding 0.4s;
+  }
+  nav.scrolled {
+    background: rgba(10,9,7,0.97);
+    border-bottom: 1px solid rgba(200,168,75,0.12);
+    padding: 1rem 4rem;
+  }
+  .nav-logo-wrap { display: flex; flex-direction: column; align-items: flex-start; }
+  .nav-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    text-transform: uppercase;
+    text-decoration: none;
+    line-height: 1;
+  }
+  .nav-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.72rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    margin-top: 3px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    align-items: center;
+  }
+  .nav-links a {
+    font-family: 'Cinzel', serif;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0; right: 0;
+    height: 1px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+    transform-origin: left;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .nav-cta { margin-left: 0.5rem; }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span { display: block; width: 24px; height: 1px; background: var(--gold); transition: all 0.3s; }
+  .hamburger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+  /* ══ HERO ══ */
+  #hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 55% 70% at 72% 45%, rgba(200,168,75,0.07) 0%, transparent 65%),
+      radial-gradient(ellipse 35% 50% at 15% 75%, rgba(200,168,75,0.05) 0%, transparent 55%),
+      radial-gradient(ellipse 20% 30% at 85% 15%, rgba(200,168,75,0.04) 0%, transparent 50%);
+  }
+  .hero-spotlight {
+    position: absolute;
+    top: -20%; right: 15%;
+    width: 2px; height: 130%;
+    background: linear-gradient(to bottom, rgba(200,168,75,0.2), transparent);
+    transform: rotate(-12deg);
+    transform-origin: top center;
+    filter: blur(3px);
+    pointer-events: none;
+  }
+  .hero-spotlight::before {
+    content: '';
+    position: absolute;
+    top: 0; left: -70px;
+    width: 140px; height: 100%;
+    background: linear-gradient(to bottom, rgba(200,168,75,0.09) 0%, rgba(200,168,75,0.04) 40%, transparent 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    filter: blur(10px);
+  }
+  .hero-spotlight-2 {
+    position: absolute;
+    top: -10%; right: 40%;
+    width: 1px; height: 110%;
+    background: linear-gradient(to bottom, rgba(200,168,75,0.12), transparent);
+    transform: rotate(8deg);
+    transform-origin: top center;
+    filter: blur(2px);
+    pointer-events: none;
+  }
+  .hero-spotlight-3 {
+    position: absolute;
+    top: -5%; left: 55%;
+    width: 1px; height: 100%;
+    background: linear-gradient(to bottom, rgba(200,168,75,0.08), transparent);
+    transform: rotate(-3deg);
+    transform-origin: top center;
+    filter: blur(3px);
+    pointer-events: none;
+  }
+  .hero-lines {
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 50%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .hero-lines::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(90deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 38px);
+    opacity: 0.055;
+  }
+  .hero-lines::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to left, transparent 0%, var(--black) 100%);
+  }
+  .hero-scanlines {
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,0,0,0.06) 3px, rgba(0,0,0,0.06) 4px);
+    pointer-events: none;
+    opacity: 0.35;
+  }
+  .curtain-left, .curtain-right {
+    position: absolute; top: 0;
+    width: 100px; height: 100%;
+    pointer-events: none; z-index: 2;
+  }
+  .curtain-left { left: 0; background: linear-gradient(to right, rgba(10,9,7,1) 0%, rgba(10,9,7,0.7) 60%, transparent 100%); }
+  .curtain-right { right: 0; background: linear-gradient(to left, rgba(10,9,7,1) 0%, rgba(10,9,7,0.5) 60%, transparent 100%); }
+
+  .particles { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  .particle {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: floatUp var(--dur,8s) var(--delay,0s) infinite linear;
+    opacity: 0;
+  }
+  @keyframes floatUp {
+    0%   { transform: translateY(100vh) translateX(0); opacity: 0; }
+    10%  { opacity: var(--op,0.4); }
+    90%  { opacity: var(--op,0.4); }
+    100% { transform: translateY(-10vh) translateX(var(--drift,20px)); opacity: 0; }
+  }
+
+  .hero-ornament {
+    position: absolute;
+    top: 6%; right: 4%;
+    opacity: 0.1;
+    pointer-events: none;
+    animation: slowRotate 80s linear infinite;
+  }
+  @keyframes slowRotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+  .hero-arch {
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 700px; height: 220px;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+
+  .hero-corner-bl {
+    position: absolute;
+    bottom: 80px; left: 20px;
+    opacity: 0.12;
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 700px;
+  }
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.45em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: '';
+    display: block;
+    width: 20px; height: 1px;
+    background: var(--gold);
+    opacity: 0.6;
+  }
+  .hero-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(4rem, 10vw, 8.5rem);
+    font-weight: 300;
+    line-height: 0.95;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+    opacity: 0;
+    animation: fadeUp 1s 0.4s forwards;
+  }
+  .hero-name em {
+    display: block;
+    font-style: italic;
+    color: var(--gold-light);
+    text-shadow: 0 0 80px rgba(200,168,75,0.2);
+  }
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 2.5rem 0;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.7s forwards;
+    width: 300px;
+  }
+  .hero-divider-line { flex: 1; height: 1px; background: linear-gradient(to right, var(--gold), rgba(200,168,75,0.15)); }
+  .hero-divider-diamond { width: 7px; height: 7px; border: 1px solid var(--gold); transform: rotate(45deg); flex-shrink: 0; }
+  .hero-divider-dot { width: 3px; height: 3px; background: rgba(200,168,75,0.5); border-radius: 50%; flex-shrink: 0; }
+  .hero-divider-line-r { width: 25px; height: 1px; background: rgba(200,168,75,0.3); }
+
+  .hero-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--muted);
+    font-weight: 300;
+    max-width: 420px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.9s forwards;
+    margin-bottom: 2.5rem;
+  }
+  .hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.8s 1.1s forwards;
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 3rem; left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 1s 1.8s forwards;
+    z-index: 3;
+  }
+  .hero-scroll span {
+    font-family: 'Cinzel', serif;
+    font-size: 0.58rem;
+    letter-spacing: 0.35em;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .scroll-line {
+    width: 1px; height: 55px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s 2s infinite;
+  }
+
+  /* ══ ORNAMENT DIVIDERS ══ */
+  .ornament-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem 4rem;
+  }
+  .ornament-divider::before, .ornament-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+  }
+  .ornament-divider::before { background: linear-gradient(to right, transparent, rgba(200,168,75,0.25)); }
+  .ornament-divider::after  { background: linear-gradient(to left,  transparent, rgba(200,168,75,0.25)); }
+  .ornament-divider svg { flex-shrink: 0; opacity: 0.5; }
+
+  /* ══ SECTIONS ══ */
+  section { padding: 8rem 4rem; position: relative; overflow: hidden; }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.45em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .section-label::before { content: ''; display: block; width: 30px; height: 1px; background: var(--gold); flex-shrink: 0; }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.1;
+    margin-bottom: 3rem;
+  }
+  .section-title em { font-style: italic; color: var(--gold-light); }
+
+  /* ══ ABOUT ══ */
+  #about-wrap { position: relative; overflow: hidden; }
+  .about-bg-grid {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      repeating-linear-gradient(0deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 80px),
+      repeating-linear-gradient(90deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 80px);
+    opacity: 0.022;
+  }
+  .about-bg-radial {
+    position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 70% 70% at 80% 50%, rgba(200,168,75,0.04) 0%, transparent 70%);
+  }
+  #about {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 7rem;
+    align-items: start;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 10rem 4rem;
+    position: relative;
+    z-index: 1;
+  }
+  .about-visual { position: relative; max-width: 300px; }
+  .portrait-frame {
+    position: relative;
+    aspect-ratio: 2/3;
+    background: var(--charcoal);
+    overflow: hidden;
+  }
+  .portrait-frame::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(135deg, rgba(200,168,75,0.12) 0%, transparent 50%),
+      repeating-linear-gradient(-45deg, transparent, transparent 18px, rgba(200,168,75,0.035) 18px, rgba(200,168,75,0.035) 19px);
+  }
+  .portrait-frame::after {
+    content: '';
+    position: absolute; inset: 12px;
+    border: 1px solid rgba(200,168,75,0.12);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .portrait-frame img { width:100%; height:100%; object-fit:cover; display:block; }
+  .corner {
+    position: absolute;
+    width: 36px; height: 36px;
+    border-color: var(--gold); border-style: solid;
+    opacity: 0.5;
+    transition: all 0.4s;
+  }
+  .about-visual:hover .corner { width: 52px; height: 52px; opacity: 0.85; }
+  .corner-tl { top: -12px; left: -12px; border-width: 1px 0 0 1px; }
+  .corner-tr { top: -12px; right: -12px; border-width: 1px 1px 0 0; }
+  .corner-bl { bottom: -12px; left: -12px; border-width: 0 0 1px 1px; }
+  .corner-br { bottom: -12px; right: -12px; border-width: 0 1px 1px 0; }
+  .portrait-diamond {
+    position: absolute;
+    bottom: -18px; left: 50%;
+    width: 10px; height: 10px;
+    border: 1px solid var(--gold);
+    background: var(--black);
+    transform: translateX(-50%) rotate(45deg);
+    opacity: 0.6;
+  }
+
+  /* ══ PORTRAIT SIDE DECOR ══ */
+  .about-side-decor {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .side-decor-rule {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1.6rem;
+  }
+  .side-decor-rule::before,
+  .side-decor-rule::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, rgba(200,168,75,0.35), transparent);
+  }
+  .side-decor-rule::after {
+    background: linear-gradient(to left, rgba(200,168,75,0.1), transparent);
+  }
+  .side-decor-rule span {
+    width: 5px; height: 5px;
+    border: 1px solid rgba(200,168,75,0.6);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+
+  .side-stat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .side-stat {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(200,168,75,0.07);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+  .side-stat::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 0;
+    background: rgba(200,168,75,0.04);
+    transition: width 0.4s;
+  }
+  .side-stat:hover::before { width: 100%; }
+  .side-stat-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.54rem;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+    text-transform: uppercase;
+    position: relative;
+  }
+  .side-stat-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--gold-light);
+    position: relative;
+  }
+
+  .side-quote-block {
+    margin-top: 1.8rem;
+    padding: 1.2rem 1.4rem;
+    border-left: 1px solid rgba(200,168,75,0.25);
+    position: relative;
+  }
+  .side-quote-block::before {
+    content: '«';
+    position: absolute;
+    top: -0.5rem; left: 0.6rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    color: rgba(200,168,75,0.12);
+    line-height: 1;
+  }
+  .side-quote-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .side-quote-attr {
+    font-family: 'Cinzel', serif;
+    font-size: 0.5rem;
+    letter-spacing: 0.3em;
+    color: rgba(200,168,75,0.4);
+    text-transform: uppercase;
+    margin-top: 0.6rem;
+  }
+
+  .side-ornament-svg {
+    margin-top: 2rem;
+    text-align: center;
+    opacity: 0.18;
+  }
+
+  .side-small-photo {
+    margin-top: 1.8rem;
+    position: relative;
+    aspect-ratio: 3/2;
+    max-height: 140px;
+    overflow: hidden;
+    background: var(--charcoal);
+  }
+  .side-small-photo::after {
+    content: '';
+    position: absolute; inset: 8px;
+    border: 1px solid rgba(200,168,75,0.12);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .side-small-photo img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(15%) brightness(0.85);
+    transition: transform 0.5s, filter 0.4s;
+  }
+  .side-small-photo:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%) brightness(1);
+  }
+  .side-small-photo .gallery-placeholder {
+    position: absolute; inset: 0;
+  }
+
+  /* ══ NEW BIO TEXT STYLES ══ */
+  .about-text .motto-banner {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+    padding: 1.2rem 1.8rem;
+    border: 1px solid rgba(200,168,75,0.2);
+    background: linear-gradient(135deg, rgba(200,168,75,0.06) 0%, transparent 60%);
+    position: relative;
+    overflow: hidden;
+  }
+  .about-text .motto-banner::before {
+    content: '';
+    position: absolute; top: 0; left: 0;
+    width: 3px; height: 100%;
+    background: linear-gradient(to bottom, var(--gold), rgba(200,168,75,0.2));
+  }
+  .motto-star {
+    color: var(--gold);
+    font-size: 1.5rem;
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+  .motto-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--gold-light);
+    line-height: 1.4;
+  }
+  .motto-text strong {
+    display: block;
+    font-style: normal;
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+  }
+
+  .about-text .bio-block {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(200,168,75,0.08);
+    position: relative;
+  }
+  .about-text .bio-block:last-of-type { border-bottom: none; }
+
+  .bio-block-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    letter-spacing: 0.4em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+    opacity: 0.8;
+  }
+  .bio-block p {
+    font-size: 1.05rem;
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 0.6rem;
+  }
+  .bio-block p.lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--cream);
+    font-weight: 300;
+  }
+
+  /* Kompetenzliste */
+  .competencies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 1.5rem;
+    margin: 1.2rem 0 0;
+  }
+  .comp-item {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    text-transform: uppercase;
+    transition: color 0.3s;
+    padding: 0.45rem 0;
+    border-bottom: 1px solid rgba(200,168,75,0.07);
+  }
+  .comp-item::before {
+    content: '';
+    width: 4px; height: 4px;
+    border: 1px solid var(--gold);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+    opacity: 0.7;
+    transition: opacity 0.3s, background 0.3s;
+  }
+  .comp-item:hover { color: var(--gold-light); }
+  .comp-item:hover::before { opacity: 1; background: var(--gold); }
+
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    margin-top: 2.5rem;
+    border: 1px solid rgba(200,168,75,0.15);
+  }
+  .fact {
+    padding: 1.5rem; border-right: 1px solid rgba(200,168,75,0.15);
+    text-align: center; background: var(--black); transition: background 0.3s;
+  }
+  .fact:hover { background: rgba(200,168,75,0.04); }
+  .fact:last-child { border-right: none; }
+  .fact-value { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--gold); line-height: 1; display: block; }
+  .fact-label { font-family: 'Cinzel', serif; font-size: 0.52rem; letter-spacing: 0.25em; color: var(--muted); text-transform: uppercase; margin-top: 0.4rem; display: block; }
+
+  /* ══ GALLERY ══ */
+  #gallery {
+    padding: 8rem 4rem;
+    background: var(--deep);
+    border-top: 1px solid rgba(200,168,75,0.1);
+    border-bottom: 1px solid rgba(200,168,75,0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  #gallery::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent, transparent 40px,
+      rgba(200,168,75,0.012) 40px, rgba(200,168,75,0.012) 41px
+    );
+    pointer-events: none;
+  }
+  .gallery-inner { max-width: 1300px; margin: 0 auto; position: relative; z-index: 1; }
+  .gallery-header { text-align: center; margin-bottom: 4.5rem; }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5rem;
+  }
+  /* Featured large item */
+  .gallery-item-large {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    background: var(--charcoal);
+    cursor: pointer;
+    group: gallery;
+  }
+  .gallery-item-large .gallery-img-wrap { aspect-ratio: 4/5; }
+  .gallery-img-wrap {
+    aspect-ratio: 3/4;
+    position: relative;
+    overflow: hidden;
+  }
+  /* For landscape items */
+  .gallery-item.landscape .gallery-img-wrap { aspect-ratio: 16/10; }
+
+  .gallery-item img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94), filter 0.4s;
+    filter: grayscale(20%) brightness(0.88);
+  }
+  .gallery-item:hover img {
+    transform: scale(1.06);
+    filter: grayscale(0%) brightness(1);
+  }
+
+  /* Placeholder frame when no image */
+  .gallery-placeholder {
+    width: 100%; height: 100%;
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 1rem;
+    background:
+      linear-gradient(135deg, rgba(200,168,75,0.06) 0%, transparent 55%),
+      repeating-linear-gradient(-45deg, transparent, transparent 14px, rgba(200,168,75,0.03) 14px, rgba(200,168,75,0.03) 15px);
+  }
+  .gallery-placeholder svg { opacity: 0.22; }
+  .gallery-placeholder-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.52rem;
+    letter-spacing: 0.35em;
+    color: rgba(200,168,75,0.28);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  /* Gold overlay on hover */
+  .gallery-item::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(10,9,7,0.75) 0%, rgba(10,9,7,0.1) 50%, transparent 100%);
+    transition: opacity 0.4s;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .gallery-item:hover::after { opacity: 1; }
+
+  /* Corner ornament */
+  .gallery-corner {
+    position: absolute;
+    width: 22px; height: 22px;
+    border-color: rgba(200,168,75,0.5);
+    border-style: solid;
+    z-index: 2;
+    transition: all 0.4s;
+    opacity: 0;
+    pointer-events: none;
+  }
+  .gallery-item:hover .gallery-corner { opacity: 1; }
+  .gallery-item:hover .gallery-corner-tl { top: 8px; left: 8px; }
+  .gallery-item:hover .gallery-corner-br { bottom: 8px; right: 8px; }
+  .gallery-corner-tl { top: 14px; left: 14px; border-width: 1px 0 0 1px; }
+  .gallery-corner-br { bottom: 14px; right: 14px; border-width: 0 1px 1px 0; }
+
+  .gallery-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 1.5rem 1.2rem 1.2rem;
+    z-index: 3;
+    transform: translateY(8px);
+    opacity: 0;
+    transition: all 0.4s;
+  }
+  .gallery-item:hover .gallery-caption { transform: translateY(0); opacity: 1; }
+  .gallery-caption-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    color: var(--cream);
+    font-style: italic;
+  }
+  .gallery-caption-year {
+    font-family: 'Cinzel', serif;
+    font-size: 0.52rem;
+    letter-spacing: 0.3em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-top: 0.2rem;
+  }
+
+  /* ══ CAREER ══ */
+  #career {
+    background: var(--black);
+    border-top: 1px solid rgba(200,168,75,0.1);
+    border-bottom: 1px solid rgba(200,168,75,0.1);
+  }
+  #career::before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 75%;
+    transform: translate(-50%,-50%);
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(200,168,75,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .career-watermark {
+    position: absolute;
+    top: 50%; right: -50px;
+    transform: translateY(-50%);
+    opacity: 0.025;
+    pointer-events: none;
+  }
+  .career-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+  .career-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem; }
+
+  .timeline { position: relative; }
+  .timeline::before {
+    content: '';
+    position: absolute; left: 0; top: 0; bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--gold) 0%, rgba(200,168,75,0.08) 100%);
+  }
+  .timeline-item {
+    padding-left: 3rem; padding-bottom: 4rem;
+    position: relative;
+    opacity: 0; transform: translateX(-20px);
+    transition: all 0.7s;
+  }
+  .timeline-item.visible { opacity: 1; transform: translateX(0); }
+  .timeline-dot {
+    position: absolute;
+    left: -5px; top: 6px;
+    width: 11px; height: 11px;
+    border: 1px solid var(--gold);
+    background: var(--deep);
+    transform: rotate(45deg);
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  .timeline-item:hover .timeline-dot { background: var(--gold); box-shadow: 0 0 14px rgba(200,168,75,0.55); }
+  .timeline-period { font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.5rem; }
+  .timeline-title { font-family: 'Cormorant Garamond', serif; font-size: 1.9rem; font-weight: 400; color: var(--cream); margin-bottom: 0.5rem; line-height: 1.2; }
+  .timeline-desc { color: var(--muted); font-size: 1rem; font-style: italic; max-width: 560px; }
+
+  /* ══ QUOTE ══ */
+  #quote { text-align: center; padding: 10rem 4rem; position: relative; overflow: hidden; }
+  #quote::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 65% 65% at 50% 50%, rgba(200,168,75,0.055) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  #quote::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(200,168,75,0.025) 59px, rgba(200,168,75,0.025) 60px);
+    pointer-events: none;
+  }
+  .quote-frame {
+    position: absolute; inset: 4rem 2rem;
+    border: 1px solid rgba(200,168,75,0.055);
+    pointer-events: none;
+  }
+  .qfc {
+    position: absolute;
+    width: 22px; height: 22px;
+    border-color: rgba(200,168,75,0.28); border-style: solid;
+  }
+  .qfc-tl { top:-1px; left:-1px; border-width:1px 0 0 1px; }
+  .qfc-tr { top:-1px; right:-1px; border-width:1px 1px 0 0; }
+  .qfc-bl { bottom:-1px; left:-1px; border-width:0 0 1px 1px; }
+  .qfc-br { bottom:-1px; right:-1px; border-width:0 1px 1px 0; }
+
+  .blockquote { max-width: 780px; margin: 0 auto; position: relative; z-index: 1; }
+  .blockquote-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14rem; font-weight: 300;
+    color: rgba(200,168,75,0.07);
+    position: absolute; top: -5rem; left: -4rem;
+    line-height: 1; pointer-events: none;
+  }
+  .blockquote p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
+    font-weight: 300; font-style: italic;
+    color: var(--cream); line-height: 1.55;
+    position: relative; z-index: 1;
+  }
+  .blockquote-source { margin-top: 2rem; font-family: 'Cinzel', serif; font-size: 0.63rem; letter-spacing: 0.3em; color: var(--gold); text-transform: uppercase; }
+
+  /* ══ CONTACT ══ */
+  #contact {
+    background: var(--deep);
+    border-top: 1px solid rgba(200,168,75,0.1);
+    text-align: center;
+    padding: 9rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-geo {
+    position: absolute; inset: 0; pointer-events: none;
+    background:
+      repeating-linear-gradient(45deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 60px),
+      repeating-linear-gradient(-45deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 60px);
+    opacity: 0.025;
+  }
+  #contact::before {
+    content: '';
+    position: absolute; top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 4px; height: 100%;
+    background: linear-gradient(to bottom, rgba(200,168,75,0.14), transparent);
+    filter: blur(8px);
+    pointer-events: none;
+  }
+  .contact-ring, .contact-ring-2 {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    border: 1px solid rgba(200,168,75,0.05);
+    pointer-events: none;
+  }
+  .contact-ring { width: 500px; height: 500px; }
+  .contact-ring-2 { width: 720px; height: 720px; border-color: rgba(200,168,75,0.03); }
+
+  .contact-inner { max-width: 640px; margin: 0 auto; position: relative; z-index: 1; }
+  .contact-info { margin-top: 3rem; display: flex; flex-direction: column; gap: 0.9rem; align-items: center; }
+  .contact-line { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--muted); font-style: italic; }
+  .contact-line strong { color: var(--gold-light); font-style: normal; font-weight: 400; }
+  .contact-buttons { display: flex; justify-content: center; gap: 1.2rem; margin-top: 3rem; flex-wrap: wrap; }
+
+  /* ══ FOOTER ══ */
+  footer {
+    padding: 2.5rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    border-top: 1px solid rgba(200,168,75,0.1);
+    gap: 2rem;
+  }
+  footer p { font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.2em; color: rgba(138,127,106,0.4); text-transform: uppercase; }
+  footer p:last-child { text-align: right; }
+  .footer-ornament { text-align: center; }
+
+  /* ══ ANIMATIONS ══ */
+  @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+  @keyframes scrollPulse { 0%,100% { transform:scaleY(1);opacity:1; } 50% { transform:scaleY(0.6);opacity:0.4; } }
+
+  .reveal { opacity:0; transform:translateY(25px); transition:opacity 0.8s, transform 0.8s; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+
+  /* ══ RESPONSIVE ══ */
+  @media (max-width: 1100px) {
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .gallery-item-large { grid-column: span 2; }
+  }
+  @media (max-width: 900px) {
+    nav { padding: 1.2rem 1.5rem; }
+    nav.scrolled { padding: 1rem 1.5rem; }
+    .nav-links { display:none; position:fixed; top:0;left:0;right:0;bottom:0; background:rgba(10,9,7,0.98); flex-direction:column; justify-content:center;align-items:center; gap:2.5rem; z-index:99; }
+    .nav-links.open { display:flex; }
+    .nav-links a { font-size:0.85rem; }
+    .nav-cta { display:none; }
+    .hamburger { display:flex; z-index:101; position:relative; }
+
+    #hero { padding:0 1.5rem; min-height:100svh; }
+    .hero-lines,.hero-spotlight,.hero-spotlight-2,.hero-spotlight-3,.hero-arch,.hero-corner-bl { display:none; }
+    .hero-buttons { gap:0.8rem; }
+
+    #about { grid-template-columns:1fr; gap:3rem; padding:5rem 1.5rem; }
+    .about-visual { max-width:260px; margin:0 auto; }
+
+    section { padding:5rem 1.5rem; }
+    #career { padding:5rem 1.5rem; }
+    .career-header { flex-direction:column; align-items:flex-start; }
+    #quote { padding:6rem 1.5rem; }
+    .quote-frame { inset:2rem 0.5rem; }
+    .blockquote-mark { font-size:8rem; top:-2rem; left:-1rem; }
+    #contact { padding:5rem 1.5rem; }
+    .contact-ring,.contact-ring-2 { display:none; }
+
+    #gallery { padding:5rem 1.5rem; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item-large { grid-column: span 2; grid-row: span 1; }
+    .gallery-item-large .gallery-img-wrap { aspect-ratio: 16/9; }
+
+    .facts { grid-template-columns:1fr; }
+    .fact { border-right:none; border-bottom:1px solid rgba(200,168,75,0.15); }
+    .fact:last-child { border-bottom:none; }
+
+    .competencies { grid-template-columns: 1fr; }
+
+    footer { grid-template-columns:1fr; text-align:center; padding:1.5rem; gap:0.5rem; }
+    footer p:last-child { text-align:center; }
+    .footer-ornament { display:none; }
+
+    .hero-ornament { width:120px; top:5%;right:2%; }
+    .career-watermark { right:-120px; }
+    .ornament-divider { padding:0.5rem 1.5rem; }
+  }
+
+  @media (max-width: 560px) {
+    .gallery-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .gallery-item-large { grid-column: span 2; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ФОТОГРАФИИ: замените src на пути к вашим файлам (или URL). Пустая строка "" покажет заглушку. -->
+<script>
+const PHOTOS = {
+
+  // Портрет
+  portrait: {
+    src:     "portret.png",
+    alt:     "Всеволод Быков"
+  },
+
+  // Маленькое фото
+  sidePhoto: {
+    src:     "o_sebe2.jpg",
+    alt:     "Всеволод Быков"
+  },
+
+  // Галерея (5 фото)
+  gallery: [
+    { src: "g_portret.jpg", title: "Портрет", caption: "" },
+    { src: "1.jpg", title: "На сцене",  caption: "" },
+    { src: "3.jpg", title: "В роли",    caption: "" },
+    { src: "5.jpg", title: "Режиссёр",  caption: "" },
+    { src: "2.jpg", title: "Педагог",   caption: "" },
+  ]
+
+};
+</script>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo-wrap">
+    <a href="#hero" class="nav-logo">Всеволод Быков</a>
+    <span class="nav-sub">актёр театра и кино</span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about" onclick="closeMenu()">О себе</a></li>
+    <li><a href="#gallery" onclick="closeMenu()">Галерея</a></li>
+    <li><a href="#career" onclick="closeMenu()">Карьера</a></li>
+    <li><a href="#quote" onclick="closeMenu()">Слово</a></li>
+    <li><a href="#contact" onclick="closeMenu()">Контакт</a></li>
+    <li class="nav-cta"><a href="#contact" class="btn btn-outline" onclick="closeMenu()">Написать</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-scanlines"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-spotlight"></div>
+  <div class="hero-spotlight-2"></div>
+  <div class="hero-spotlight-3"></div>
+  <div class="curtain-left"></div>
+  <div class="curtain-right"></div>
+  <div class="particles" id="particles"></div>
+
+  <div class="hero-ornament">
+    <svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="120" cy="120" r="110" stroke="#c8a84b" stroke-width="0.6"/>
+      <circle cx="120" cy="120" r="88" stroke="#c8a84b" stroke-width="0.4"/>
+      <circle cx="120" cy="120" r="65" stroke="#c8a84b" stroke-width="0.4"/>
+      <circle cx="120" cy="120" r="40" stroke="#c8a84b" stroke-width="0.6"/>
+      <polygon points="120,10 127,103 220,110 127,117 120,210 113,117 20,110 113,103" stroke="#c8a84b" stroke-width="0.6" fill="none"/>
+      <polygon points="120,38 127,103 192,48 127,117 192,172 117,113 120,182 113,117 48,172 113,113 48,48 117,103" stroke="#c8a84b" stroke-width="0.3" fill="none" opacity="0.6"/>
+      <rect x="116" y="116" width="8" height="8" transform="rotate(45 120 120)" stroke="#c8a84b" stroke-width="0.8" fill="none"/>
+      <line x1="120" y1="0" x2="120" y2="18" stroke="#c8a84b" stroke-width="0.6"/>
+      <line x1="120" y1="222" x2="120" y2="240" stroke="#c8a84b" stroke-width="0.6"/>
+      <line x1="0" y1="120" x2="18" y2="120" stroke="#c8a84b" stroke-width="0.6"/>
+      <line x1="222" y1="120" x2="240" y2="120" stroke="#c8a84b" stroke-width="0.6"/>
+    </svg>
+  </div>
+
+  <div class="hero-arch">
+    <svg viewBox="0 0 700 220" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+      <path d="M0 220 Q350 10 700 220" stroke="#c8a84b" stroke-width="1" fill="none"/>
+      <path d="M40 220 Q350 45 660 220" stroke="#c8a84b" stroke-width="0.6" fill="none"/>
+      <path d="M100 220 Q350 100 600 220" stroke="#c8a84b" stroke-width="0.5" fill="none"/>
+      <line x1="0" y1="220" x2="700" y2="220" stroke="#c8a84b" stroke-width="0.4"/>
+    </svg>
+  </div>
+
+  <div class="hero-corner-bl">
+    <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+      <path d="M0 100 L0 20 Q0 0 20 0 L100 0" stroke="#c8a84b" stroke-width="0.8" fill="none"/>
+      <path d="M8 100 L8 24 Q8 8 24 8 L100 8" stroke="#c8a84b" stroke-width="0.4" fill="none" opacity="0.5"/>
+      <rect x="0" y="0" width="8" height="8" stroke="#c8a84b" stroke-width="0.6" fill="none"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Актёр театра и кино</p>
+    <h1 class="hero-name">
+      Всеволод<br><em>Быков</em>
+    </h1>
+    <div class="hero-divider">
+      <div class="hero-divider-line"></div>
+      <div class="hero-divider-dot"></div>
+      <div class="hero-divider-diamond"></div>
+      <div class="hero-divider-dot"></div>
+      <div class="hero-divider-line-r"></div>
+    </div>
+    <p class="hero-tagline">Москва. Арбат. Театр. Кино.</p>
+    <div class="hero-buttons">
+      <a href="#about" class="btn btn-gold">О себе</a>
+      <a href="#contact" class="btn btn-outline">Сотрудничество</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Далее</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="ornament-divider">
+  <svg width="50" height="14" viewBox="0 0 50 14" fill="none">
+    <rect x="22" y="4" width="6" height="6" transform="rotate(45 25 7)" stroke="#c8a84b" stroke-width="1" fill="none"/>
+    <line x1="0" y1="7" x2="18" y2="7" stroke="#c8a84b" stroke-width="0.8"/>
+    <line x1="32" y1="7" x2="50" y2="7" stroke="#c8a84b" stroke-width="0.8"/>
+  </svg>
+</div>
+
+<!-- ABOUT -->
+<div id="about-wrap">
+  <div class="about-bg-grid"></div>
+  <div class="about-bg-radial"></div>
+  <div id="about">
+    <!-- Portrait column -->
+    <div class="about-visual reveal">
+      <div class="portrait-frame" id="portrait-frame">
+      </div>
+      <div class="corner corner-tl"></div>
+      <div class="corner corner-tr"></div>
+      <div class="corner corner-bl"></div>
+      <div class="corner corner-br"></div>
+      <div class="portrait-diamond"></div>
+
+      <!-- Декор под портретом -->
+      <div class="about-side-decor reveal">
+        <div class="side-decor-rule"><span></span></div>
+
+        <div class="side-stat-list">
+          <div class="side-stat">
+            <span class="side-stat-label">Образование</span>
+            <span class="side-stat-value">ГИТИС · Щукинское</span>
+          </div>
+          <div class="side-stat">
+            <span class="side-stat-label">В кино</span>
+            <span class="side-stat-value">с 2006 года</span>
+          </div>
+          <div class="side-stat">
+            <span class="side-stat-label">Специализация</span>
+            <span class="side-stat-value">Актёр · Режиссёр</span>
+          </div>
+          <div class="side-stat">
+            <span class="side-stat-label">Педагогика</span>
+            <span class="side-stat-value">Система Станиславского</span>
+          </div>
+          <div class="side-stat">
+            <span class="side-stat-label">Город</span>
+            <span class="side-stat-value">Москва, Арбат</span>
+          </div>
+        </div>
+
+        <div class="side-quote-block">
+          <div class="side-quote-text">Где Быков — там успех</div>
+          <div class="side-quote-attr">— Сергей Королёв</div>
+        </div>
+
+        <div class="side-ornament-svg">
+          <svg width="120" height="60" viewBox="0 0 120 60" fill="none">
+            <line x1="0" y1="30" x2="48" y2="30" stroke="#c8a84b" stroke-width="0.7"/>
+            <line x1="72" y1="30" x2="120" y2="30" stroke="#c8a84b" stroke-width="0.7"/>
+            <rect x="56" y="24" width="8" height="8" transform="rotate(45 60 28)" stroke="#c8a84b" stroke-width="0.8" fill="none"/>
+            <circle cx="60" cy="28" r="18" stroke="#c8a84b" stroke-width="0.4" fill="none"/>
+            <circle cx="60" cy="28" r="24" stroke="#c8a84b" stroke-width="0.3" fill="none" opacity="0.5"/>
+            <line x1="60" y1="4" x2="60" y2="14" stroke="#c8a84b" stroke-width="0.5"/>
+            <line x1="60" y1="42" x2="60" y2="52" stroke="#c8a84b" stroke-width="0.5"/>
+            <line x1="36" y1="28" x2="46" y2="28" stroke="#c8a84b" stroke-width="0.5"/>
+            <line x1="74" y1="28" x2="84" y2="28" stroke="#c8a84b" stroke-width="0.5"/>
+          </svg>
+        </div>
+
+        <!-- Маленькое фото -->
+        <div class="side-small-photo" id="side-photo-wrap">
+        </div>
+      </div>
+    </div>
+
+    <!-- Text column -->
+    <div class="about-text">
+      <div class="section-label reveal">О себе</div>
+      <h2 class="section-title reveal">Москвич.<br><em>Подробно.</em></h2>
+
+      <!-- Deviz banner -->
+      <div class="motto-banner reveal">
+        <div class="motto-star">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <polygon points="10,1 12.3,7.3 19,7.6 14,12 15.9,18.5 10,15 4.1,18.5 6,12 1,7.6 7.7,7.3" stroke="#c8a84b" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+        <div class="motto-text">
+          <strong>Девиз</strong>
+          «Где Быков — там успех»
+        </div>
+      </div>
+
+      <!-- Block: Origins -->
+      <div class="bio-block reveal">
+        <div class="bio-block-label">Происхождение</div>
+        <p class="lead">Я родился на Старом Арбате, в Доме Грауэрмана — колыбели московской интеллигенции.</p>
+        <p>Мой отец участвовал в запуске Юрия Гагарина. Сергей Королёв говорил: «Где Быков — там успех». Эта фраза стала моим жизненным девизом. С детства — театры и музеи.</p>
+      </div>
+
+      <!-- Block: Sport -->
+      <div class="bio-block reveal">
+        <div class="bio-block-label">Спорт и дисциплина</div>
+        <p>Но всей душой — спорт. Бодибилдинг научил меня дисциплине, форме и внутреннему стержню. Уже в юности я тренировал других и понимал: тело можно изменить, а значит — можно изменить и судьбу.</p>
+        <p>Веду пресс-конференции, деловые встречи, гала-концерты и праздники.</p>
+      </div>
+
+      <!-- Block: Theatre & Education -->
+      <div class="bio-block reveal">
+        <div class="bio-block-label">Театр и образование</div>
+        <p>Потом пришёл театр. Не все были готовы видеть на курсе будущих актёров 100-килограммового спортсмена. Но я шёл вперёд: студии, курсы, музеи, спектакли.</p>
+        <p>В <strong style="color:var(--gold-light);font-weight:400">2003 году</strong> я поступил в Российский институт театрального искусства — <strong style="color:var(--cream);font-weight:400">ГИТИС</strong> — и это стало точкой отсчёта профессиональной карьеры. Далее — Щукинский институт, режиссура, консерватория, аспирантура, исследование системы Станиславского, преподавание.</p>
+      </div>
+
+      <!-- Block: Cinema & Today -->
+      <div class="bio-block reveal">
+        <div class="bio-block-label">Кино и сегодня</div>
+        <p>С <strong style="color:var(--gold-light);font-weight:400">2006 года</strong> — кино. Как актёр и как режиссёр.</p>
+        <p>Сегодня я соединяю:</p>
+        <div class="competencies">
+          <div class="comp-item">Актёрское мастерство</div>
+          <div class="comp-item">Режиссура</div>
+          <div class="comp-item">Педагогика</div>
+          <div class="comp-item">Психоанализ</div>
+          <div class="comp-item">Арт-терапия</div>
+          <div class="comp-item">Раскрытие творца</div>
+        </div>
+      </div>
+
+      <div class="facts reveal">
+        <div class="fact"><span class="fact-value">2003</span><span class="fact-label">ГИТИС</span></div>
+        <div class="fact"><span class="fact-value">2006</span><span class="fact-label">Кино</span></div>
+        <div class="fact"><span class="fact-value">Театр</span><span class="fact-label">Служение</span></div>
+      </div>
+
+      <div class="reveal" style="margin-top:2rem">
+        <a href="#career" class="btn btn-ghost">Смотреть карьеру</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DIVIDER -->
+<div class="ornament-divider">
+  <svg width="70" height="16" viewBox="0 0 70 16" fill="none">
+    <rect x="32" y="5" width="6" height="6" transform="rotate(45 35 8)" stroke="#c8a84b" stroke-width="1" fill="none"/>
+    <rect x="13" y="5" width="6" height="6" transform="rotate(45 16 8)" stroke="#c8a84b" stroke-width="0.6" fill="none" opacity="0.45"/>
+    <rect x="51" y="5" width="6" height="6" transform="rotate(45 54 8)" stroke="#c8a84b" stroke-width="0.6" fill="none" opacity="0.45"/>
+    <line x1="0" y1="8" x2="10" y2="8" stroke="#c8a84b" stroke-width="0.8"/>
+    <line x1="60" y1="8" x2="70" y2="8" stroke="#c8a84b" stroke-width="0.8"/>
+  </svg>
+</div>
+
+<!-- ══ GALLERY ══ -->
+<section id="gallery">
+  <div class="gallery-inner">
+    <div class="gallery-header">
+      <div class="section-label reveal" style="justify-content:center">Образы</div>
+      <h2 class="section-title reveal" style="text-align:center">Галерея<br><em>& Роли</em></h2>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </div><!-- /gallery-inner -->
+</section>
+
+<!-- DIVIDER -->
+<div class="ornament-divider">
+  <svg width="90" height="16" viewBox="0 0 90 16" fill="none">
+    <line x1="0" y1="8" x2="22" y2="8" stroke="#c8a84b" stroke-width="0.8"/>
+    <line x1="68" y1="8" x2="90" y2="8" stroke="#c8a84b" stroke-width="0.8"/>
+    <rect x="21" y="5" width="6" height="6" transform="rotate(45 24 8)" stroke="#c8a84b" stroke-width="0.6" fill="none" opacity="0.5"/>
+    <rect x="42" y="4" width="6" height="6" transform="rotate(45 45 7)" stroke="#c8a84b" stroke-width="1" fill="none"/>
+    <rect x="63" y="5" width="6" height="6" transform="rotate(45 66 8)" stroke="#c8a84b" stroke-width="0.6" fill="none" opacity="0.5"/>
+  </svg>
+</div>
+
+<!-- CAREER -->
+<section id="career">
+  <div class="career-watermark">
+    <svg width="380" height="480" viewBox="0 0 380 480" fill="none">
+      <ellipse cx="190" cy="210" rx="160" ry="180" stroke="#c8a84b" stroke-width="1" fill="none"/>
+      <ellipse cx="190" cy="210" rx="120" ry="135" stroke="#c8a84b" stroke-width="0.5" fill="none"/>
+      <ellipse cx="130" cy="178" rx="30" ry="20" stroke="#c8a84b" stroke-width="1" fill="none"/>
+      <ellipse cx="250" cy="178" rx="30" ry="20" stroke="#c8a84b" stroke-width="1" fill="none"/>
+      <path d="M130 268 Q190 318 250 268" stroke="#c8a84b" stroke-width="1" fill="none"/>
+      <path d="M65 95 L98 38 L140 75 L190 18 L240 75 L282 38 L315 95" stroke="#c8a84b" stroke-width="1" fill="none"/>
+      <line x1="190" y1="390" x2="190" y2="420" stroke="#c8a84b" stroke-width="1"/>
+      <line x1="160" y1="400" x2="220" y2="400" stroke="#c8a84b" stroke-width="0.6"/>
+    </svg>
+  </div>
+
+  <div class="career-inner">
+    <div class="career-header">
+      <div>
+        <div class="section-label reveal">Путь</div>
+        <h2 class="section-title reveal" style="margin-bottom:0">Карьера</h2>
+      </div>
+      <div class="reveal">
+        <a href="#contact" class="btn btn-outline">Кастинг &amp; Запросы</a>
+      </div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Начало</div>
+        <div class="timeline-title">Старый Арбат</div>
+        <div class="timeline-desc">Родился в Москве, в Доме Грауэрмана на Старом Арбате. Детство — среди театров, музеев и московской интеллигенции. Отец причастен к запуску Юрия Гагарина: «Где Быков — там успех».</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Юность</div>
+        <div class="timeline-title">Спорт и дисциплина</div>
+        <div class="timeline-desc">Бодибилдинг, тренерство, дисциплина тела и духа. Ведение мероприятий — пресс-конференции, гала-концерты, деловые встречи.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">2003</div>
+        <div class="timeline-title">ГИТИС</div>
+        <div class="timeline-desc">Поступление в Российский институт театрального искусства (ГИТИС) — точка отсчёта профессиональной карьеры. Студии, курсы, спектакли.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Далее</div>
+        <div class="timeline-title">Щукинский · Режиссура · Аспирантура</div>
+        <div class="timeline-desc">Щукинский институт, режиссура, консерватория, аспирантура. Глубокое исследование системы Станиславского. Преподавательская деятельность.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">2006</div>
+        <div class="timeline-title">Кино</div>
+        <div class="timeline-desc">Начало работы в кино — как актёр и как режиссёр. Роли разных жанров и характеров.</div>
+      </div>
+      <div class="timeline-item" style="padding-bottom:0">
+        <div class="timeline-dot"></div>
+        <div class="timeline-period">Сегодня</div>
+        <div class="timeline-title">Актёр. Режиссёр. Педагог.</div>
+        <div class="timeline-desc">Соединение актёрского мастерства, режиссуры, педагогики, психоанализа и арт-терапии. Задача — раскрывать в человеке творца.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="ornament-divider">
+  <svg width="50" height="14" viewBox="0 0 50 14" fill="none">
+    <rect x="22" y="4" width="6" height="6" transform="rotate(45 25 7)" stroke="#c8a84b" stroke-width="1" fill="none"/>
+    <line x1="0" y1="7" x2="18" y2="7" stroke="#c8a84b" stroke-width="0.8"/>
+    <line x1="32" y1="7" x2="50" y2="7" stroke="#c8a84b" stroke-width="0.8"/>
+  </svg>
+</div>
+
+<!-- QUOTE -->
+<section id="quote">
+  <div class="quote-frame">
+    <div class="qfc qfc-tl"></div>
+    <div class="qfc qfc-tr"></div>
+    <div class="qfc qfc-bl"></div>
+    <div class="qfc qfc-br"></div>
+  </div>
+  <div class="blockquote reveal">
+    <div class="blockquote-mark">«</div>
+    <p>Театр — это место, где человек может прожить тысячу жизней за одну.</p>
+    <div class="blockquote-source">— Всеволод Быков</div>
+    <div style="margin-top:2.5rem">
+      <a href="#contact" class="btn btn-ghost">Пригласить в проект</a>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="ornament-divider">
+  <svg width="50" height="14" viewBox="0 0 50 14" fill="none">
+    <rect x="22" y="4" width="6" height="6" transform="rotate(45 25 7)" stroke="#c8a84b" stroke-width="1" fill="none"/>
+    <line x1="0" y1="7" x2="18" y2="7" stroke="#c8a84b" stroke-width="0.8"/>
+    <line x1="32" y1="7" x2="50" y2="7" stroke="#c8a84b" stroke-width="0.8"/>
+  </svg>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-geo"></div>
+  <div class="contact-ring"></div>
+  <div class="contact-ring-2"></div>
+  <div class="contact-ring" style="width:300px;height:300px;border-color:rgba(200,168,75,0.08)"></div>
+  <div class="contact-inner">
+    <div class="section-label reveal" style="justify-content:center">Связь</div>
+    <h2 class="section-title reveal" style="text-align:center">Контакт<br><em>&amp; Сотрудничество</em></h2>
+    <p class="reveal" style="color:var(--muted);font-style:italic;text-align:center;font-size:1.1rem">
+      По вопросам кастинга, съёмок и театральных проектов —<br>свяжитесь с агентом или напишите напрямую.
+    </p>
+    <div class="contact-info reveal">
+      <div class="contact-line">Агент: <strong>по запросу</strong></div>
+      <div class="contact-line">Проекты: <strong>театр · кино · педагогика</strong></div>
+      <div class="contact-line">Москва, Россия</div>
+    </div>
+    <div class="contact-buttons reveal">
+      <a href="mailto:agent@example.com" class="btn btn-gold">Написать агенту</a>
+      <a href="#about" class="btn btn-outline">Узнать больше</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Всеволод Быков</p>
+  <div class="footer-ornament">
+    <svg width="60" height="30" viewBox="0 0 60 30" fill="none">
+      <rect x="27" y="12" width="6" height="6" transform="rotate(45 30 15)" stroke="#c8a84b" stroke-width="0.8" fill="none"/>
+      <line x1="0" y1="15" x2="23" y2="15" stroke="#c8a84b" stroke-width="0.6"/>
+      <line x1="37" y1="15" x2="60" y2="15" stroke="#c8a84b" stroke-width="0.6"/>
+      <circle cx="30" cy="15" r="20" stroke="#c8a84b" stroke-width="0.4" fill="none" opacity="0.3"/>
+    </svg>
+  </div>
+  <p>Актёр · Режиссёр · Педагог · Москва</p>
+</footer>
+
+<script>
+  /* ── RENDER PHOTOS FROM CONFIG ── */
+
+  function makePlaceholder(label) {
+    const wrap = document.createElement('div');
+    wrap.className = 'gallery-placeholder';
+    wrap.innerHTML = `<svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+      <rect x="1" y="1" width="38" height="38" stroke="#c8a84b" stroke-width="0.6" fill="none"/>
+      <path d="M10 30 L15 15 L22 25 L27 18 L35 30Z" stroke="#c8a84b" stroke-width="0.7" fill="none"/>
+      <circle cx="13" cy="12" r="3" stroke="#c8a84b" stroke-width="0.7" fill="none"/>
+    </svg><div class="gallery-placeholder-label">${label}</div>`;
+    return wrap;
+  }
+
+  function makeImg(src, alt, extraStyle) {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = alt;
+    img.loading = 'lazy';
+    if (extraStyle) img.setAttribute('style', extraStyle);
+    return img;
+  }
+
+  // Portrait
+  const portraitFrame = document.getElementById('portrait-frame');
+  if (portraitFrame) {
+    if (PHOTOS.portrait.src) {
+      const img = makeImg(PHOTOS.portrait.src, PHOTOS.portrait.alt, 'width:100%;height:100%;object-fit:cover;display:block;');
+      img.loading = 'eager';
+      portraitFrame.appendChild(img);
+    } else {
+      portraitFrame.appendChild(makePlaceholder('Портрет<br>Фото актёра'));
+    }
+  }
+
+  // Side small photo
+  const sideWrap = document.getElementById('side-photo-wrap');
+  if (sideWrap) {
+    if (PHOTOS.sidePhoto.src) {
+      sideWrap.appendChild(makeImg(PHOTOS.sidePhoto.src, PHOTOS.sidePhoto.alt));
+    } else {
+      sideWrap.appendChild(makePlaceholder('Фото'));
+    }
+  }
+
+  // Gallery grid
+  const grid = document.getElementById('gallery-grid');
+  if (grid) {
+    PHOTOS.gallery.forEach((photo, i) => {
+      const isLarge = i === 0;
+      const item = document.createElement('div');
+      item.className = 'gallery-item reveal' + (isLarge ? ' gallery-item-large' : '');
+
+      const imgWrap = document.createElement('div');
+      imgWrap.className = 'gallery-img-wrap';
+
+      if (photo.src) {
+        imgWrap.appendChild(makeImg(photo.src, photo.title));
+      } else {
+        imgWrap.appendChild(makePlaceholder('Фото ' + (i + 1)));
+      }
+
+      const cornerTL = document.createElement('div');
+      cornerTL.className = 'gallery-corner gallery-corner-tl';
+      const cornerBR = document.createElement('div');
+      cornerBR.className = 'gallery-corner gallery-corner-br';
+
+      const caption = document.createElement('div');
+      caption.className = 'gallery-caption';
+      const titleEl = document.createElement('div');
+      titleEl.className = 'gallery-caption-title';
+      titleEl.textContent = photo.title;
+      caption.appendChild(titleEl);
+      if (photo.caption) {
+        const yearEl = document.createElement('div');
+        yearEl.className = 'gallery-caption-year';
+        yearEl.textContent = photo.caption;
+        caption.appendChild(yearEl);
+      }
+
+      item.appendChild(imgWrap);
+      item.appendChild(cornerTL);
+      item.appendChild(cornerBR);
+      item.appendChild(caption);
+      grid.appendChild(item);
+    });
+  }
+
+  /* NAV */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  /* MENU */
+  function toggleMenu() {
+    document.getElementById('hamburger').classList.toggle('open');
+    document.getElementById('navLinks').classList.toggle('open');
+    document.body.style.overflow = document.getElementById('navLinks').classList.contains('open') ? 'hidden' : '';
+  }
+  function closeMenu() {
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('navLinks').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* PARTICLES */
+  const container = document.getElementById('particles');
+  const count = window.innerWidth < 700 ? 14 : 32;
+  for (let i = 0; i < count; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const x = Math.random() * 100;
+    const dur = 7 + Math.random() * 15;
+    const delay = Math.random() * 14;
+    const drift = (Math.random() - 0.5) * 90;
+    const op = 0.15 + Math.random() * 0.5;
+    const size = Math.random() > 0.75 ? 3 : Math.random() > 0.5 ? 2 : 1;
+    p.style.cssText = `left:${x}%;--dur:${dur}s;--delay:${delay}s;--drift:${drift}px;--op:${op};width:${size}px;height:${size}px;`;
+    container.appendChild(p);
+  }
+
+  /* REVEAL */
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  document.querySelectorAll('.timeline-item').forEach((el, i) => {
+    el.style.transitionDelay = `${i * 0.15}s`;
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
