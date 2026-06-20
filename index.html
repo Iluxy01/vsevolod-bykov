@@ -3,7 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Всеволод Быков — Актёр</title>
+
+<!-- ── SEO: Primary ── -->
+<title>Всеволод Быков — Актёр, Режиссёр, Педагог | Москва</title>
+<meta name="description" content="Всеволод Быков — профессиональный актёр, режиссёр и педагог из Москвы. Театр, кино, педагогика, арт-терапия. По вопросам кастинга и сотрудничества — свяжитесь с агентом.">
+<meta name="keywords" content="Всеволод Быков, актёр, режиссёр, педагог, Москва, театр, кино, кастинг, арт-терапия">
+<meta name="author" content="Всеволод Быков">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://iluxy01.github.io/vsevolod-bykov/">
+
+<!-- ── SEO: Open Graph (ВКонтакте, Telegram, Facebook) ── -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Всеволод Быков — Актёр, Режиссёр, Педагог">
+<meta property="og:description" content="Профессиональный актёр и режиссёр из Москвы. Театр, кино, педагогика, арт-терапия. Более 20 лет на сцене.">
+<meta property="og:url" content="https://iluxy01.github.io/vsevolod-bykov/">
+<meta property="og:locale" content="ru_RU">
+<meta property="profile:first_name" content="Всеволод">
+<meta property="profile:last_name" content="Быков">
+
+<!-- ── SEO: Twitter/X Card ── -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Всеволод Быков — Актёр, Режиссёр, Педагог">
+<meta name="twitter:description" content="Профессиональный актёр и режиссёр из Москвы. Театр, кино, педагогика, арт-терапия.">
+
+<!-- ── SEO: Structured Data (JSON-LD) ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Всеволод Быков",
+  "jobTitle": "Актёр, Режиссёр, Педагог",
+  "description": "Профессиональный актёр, режиссёр и педагог из Москвы. Специализируется на театре, кино, арт-терапии и психоанализе в актёрском мастерстве.",
+  "url": "https://iluxy01.github.io/vsevolod-bykov/",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Москва",
+    "addressCountry": "RU"
+  },
+  "knowsAbout": ["Актёрское мастерство", "Режиссура", "Театр", "Кино", "Педагогика", "Арт-терапия"],
+  "worksFor": {
+    "@type": "PerformingArtsTheater",
+    "name": "Театр"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
 <style>
@@ -1148,13 +1192,13 @@ const PHOTOS = {
   // Портрет
   portrait: {
     src:     "portret.png",
-    alt:     "Всеволод Быков"
+    alt:     "Всеволод Быков — актёр и режиссёр, портрет"
   },
 
   // Маленькое фото
   sidePhoto: {
     src:     "o_sebe2.jpg",
-    alt:     "Всеволод Быков"
+    alt:     "Всеволод Быков, актёр театра и кино, Москва"
   },
 
   // Галерея (5 фото)
@@ -1170,12 +1214,12 @@ const PHOTOS = {
 </script>
 
 <!-- NAV -->
-<nav id="navbar">
+<nav id="navbar" aria-label="Основная навигация">
   <div class="nav-logo-wrap">
-    <a href="#hero" class="nav-logo">Всеволод Быков</a>
+    <a href="#hero" class="nav-logo" aria-label="Всеволод Быков — главная">Всеволод Быков</a>
     <span class="nav-sub">актёр театра и кино</span>
   </div>
-  <ul class="nav-links" id="navLinks">
+  <ul class="nav-links" id="navLinks" role="list">
     <li><a href="#about" onclick="closeMenu()">О себе</a></li>
     <li><a href="#gallery" onclick="closeMenu()">Галерея</a></li>
     <li><a href="#career" onclick="closeMenu()">Карьера</a></li>
@@ -1189,7 +1233,8 @@ const PHOTOS = {
 </nav>
 
 <!-- HERO -->
-<section id="hero">
+<main>
+<section id="hero" aria-label="Главная">
   <div class="hero-bg"></div>
   <div class="hero-scanlines"></div>
   <div class="hero-lines"></div>
@@ -1562,6 +1607,7 @@ const PHOTOS = {
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer>
   <p>© 2025 Всеволод Быков</p>
   <div class="footer-ornament">
